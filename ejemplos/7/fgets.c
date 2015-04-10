@@ -20,10 +20,11 @@ int main (void)
 	genera_mensaje(file);
 
 	code = malloc(101);
-	while(fgets(code, 100, file)) {
+	while(fgets(code, 101, file)) {
 		printf("%s\n", code);
 	}
 
 	free(code);
+	fclose(file);
 	return 0;
 }
